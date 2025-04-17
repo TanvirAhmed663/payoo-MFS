@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+     <!-- DaisyUI + Tailwind CDN -->
+    <!-- Tailwind + DaisyUI -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {},
+    },
+    plugins: [daisyui],
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/daisyui"></script>
+
+   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="bg-slate-800">
+    <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+        <header>
+            <nav class="flex jusify-between ml-3">
+                <div class="flex items-center">
+                    <div><img src="assets/Group.png" alt=""></div>
+                    <div>
+                        <h1 class="text-2xl font-bold"> $<span id="main-balance">450000</span>/=</h1>
+                        <p>Available Balance</p>
+                    </div>
+                </div>
+                <div class="ml-24 mt-0  ">
+                    <button class="btn btn-neutral w-24 mt-4  hover:bg-blue-400">Log Out</button>
+                </div>
+         </nav>
+         <section class="mt-8 ml-3">
+            <h1 class="text-2xl font-bold "> 🔥Welcome to Payooo!</h1>
+            
+            <p>Enjoy easy and convenient financial services with us. CashOut charge is low! </p>
+            
+            <div class="cards  grid grid-cols-3 mt-14 gap-2 p-2"  >
+                <div id="Add-Money-Box">
+                <a>
+                     <div class=" border p-4 text-center rounded shadow hover:bg-blue-300 ">
+                    <img class="w-8 mx-auto" src="assets/wallet1.png" alt="">
+                     <a class="link hover:text-blue-500">Add Money</a>
+                </div>
+            </a>
+               </div>
+
+               <div id="Cash-Out-Box">
+               <a> 
+                <div class="border p-4 text-center rounded shadow hover:bg-blue-300"  >
+                <img class="w-8 mx-auto" src="assets/send1.png" alt="">
+                 <a class="link hover:text-blue-600">Cash-Out</a>
+            </div>
+          </a>
+        </div>
+               <div id="Trans-Box">
+                  <a> 
+                    <div class="border p-4 text-center rounded shadow hover:bg-blue-300">
+                <img class="w-8 mx-auto" src="assets/money1.png" alt="">
+                 <a class="link hover:text-blue-600">Transfer</a>
+            </div>
+          </a>
+      </div>
+                 <div id="get-bonus-box">
+                    <a>
+                        <div class="border p-4 text-center rounded shadow hover:bg-blue-300">
+                    <img class="w-8 mx-auto" src="assets/bonus1.png" alt="">
+                     <a class="link hover:text-blue-600" >Get Bonus</a>
+                </div>
+            </a>
+        </div>
+                  <div id="Pay-Bill-box">
+                      <a>
+                        <div class="border p-4 text-center rounded shadow hover:bg-blue-300">
+                           <img class="w-8 mx-auto" src="assets/purse1.png" alt="">
+                         <a class="link hover:text-blue-600">Pay-Bill</a>
+                </div>
+            </a>
+           
+        </div>
+
+                    <div id="transaction-box">
+    
+                      <a>
+                         <div class="border p-4 text-center rounded shadow hover:bg-blue-300">
+                        <img class="w-8 mx-auto" src="assets/transaction1.png" alt="">
+                        <a class="link hover:text-blue-600">Transaction</a>
+                   </div>
+                        </a>
+              </div>
+     </div>
+
+          <section id="Add-Money">
+        <h1 class="text-xl font-bold">Add money</h1>
+        <div class="hero bg-gray-200 min-h-screen ">
+                        
+            <div class="hero-content flex-col  lg:flex-row-reverse">
+              
+              <div class="card mb-72 mt-0  bg-base-100 w-full   max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                            <fieldset class="fieldset">
+                              <label class="fieldset-label font-semibold text-black"  >Select a Bank</label>
+                              <select required  class="select box w-72 input" style="border-width: 3px ; border-color:rgb(110, 142, 241)">
+                                <option disabled selected >Select Bank</option>
+                                <option>   Nagad     </option>
+                                <option>   Rocket    </option>
+                                <option>   U-pay     </option>
+                                <option>   BRAC Bank </option>
+                                <option>   Bkash     </option>
+                                <option>   EBL       </option>
+                                <option>   DBBL      </option>
+                                <option>   BB        </option>
+                                <option>   NBL       </option>
+                                <option>   AB Bank  </option>
+                              </select>
+                              
+                              <!-- <input id="Account-number" class=" box w-72 input  " style="border-width: 3px ; border-color:rgb(110, 142, 241);" type="number" placeholder="   Enter your number" required />   -->
+                              <label class="fieldset-label font-semibold text-black " >Bank Account Number</label>
+                              <input id="add-money-ac-num"  class=" box w-72 input cursor-pointer "  style="border-width: 3px ; border-color:rgb(110, 142, 241);" type="number" maxlength="11" placeholder="    Enter 11 digit your AC number" required/>
+                              <label class="fieldset-label font-semibold text-black " >Amount to Add</label>
+                              <input id="add-money-amount" class=" box w-72 input  "                    style="border-width: 3px ; border-color:rgb(110, 142, 241);"                           type="number"  placeholder="    Add Amount" required/>
+                              <label class="fieldset-label font-semibold text-black " >PIN Number</label>
+                              <input id="add-money-pin" class=" box w-72 input cursor-pointer "         style="border-width: 3px ; border-color:rgb(110, 142, 241);"           type="password" maxlength="6"  placeholder="    Enter your PIN" required/>
+                          
+                          
+                              <button id="btn-add-money"  class="btn btn-neutral w-72 mt-4 bg-blue-500 hover:bg-blue-600" type="submit">Add Money</button>
+                            </fieldset>
+                          </form>
+                          
+              </div>
+            </div>
+          </div>
+
+         </section>
+                 
+                          <section id="Cash-Out">
+                        <h1 class="text-xl font-bold">Cash-Out</h1>
+                        <div class="hero bg-gray-200 min-h-screen ">
+                                        
+                            <div class="hero-content flex-col  lg:flex-row-reverse">
+                              
+                              <div class="card mb-72 mt-0  bg-base-100 w-full   max-w-sm shrink-0 shadow-2xl">
+                                    <form class="card-body">
+                                            <fieldset class="fieldset">
+                                             
+                                              <label  class="fieldset-label font-semibold text-black " >Agent Number</label>
+                                              <input id="agent-num-cash-out"  class=" box w-72 input cursor-pointer "  style="border-width: 3px ; border-color:rgb(110, 142, 241);" type="number" maxlength="11" placeholder="    Enter 11 digit your number" required/>
+                                              <label class="fieldset-label font-semibold text-black " >Amount</label>
+                                              <input id="amount-cash-out" class=" box w-72 input  "  style="border-width: 3px ; border-color:rgb(110, 142, 241);" type="number" placeholder="    Enter Amount" required/>
+                                              <label class="fieldset-label font-semibold text-black " >PIN Number</label>
+                                              <input id="pin-cash-out"  class=" box w-72 input cursor-pointer "  style="border-width: 3px ; border-color:rgb(110, 142, 241);" type="password" maxlength="6" placeholder="    Enter your PIN" required/>
+                                          
+                                          
+                                              <button id="btn-cash-Out"   class="btn btn-neutral w-72 mt-4 bg-blue-500 hover:bg-blue-600" type="submit" >Cash-Out</button>
+                                            </fieldset>
+                                          </form>
+                                          
+                              </div>
+                            </div>
+                          </div>
+                          </section>
+
+                                <section id="transfer-money">
+                        <h1 class="text-xl font-bold">Transfer Money</h1>
+                        <div class="hero bg-gray-200 min-h-screen ">
+                                        
+                            <div class="hero-content flex-col  lg:flex-row-reverse">
+                              
+                              <div class="card mb-72 mt-0  bg-base-100 w-full   max-w-sm shrink-0 shadow-2xl">
+                                    <form class="card-body">
+                                            <fieldset class="fieldset">
+                                             
+                                              <label  class="fieldset-label font-semibold text-black " >User Account Number</label>
+                                              <input id="account-num-trans"  class=" box w-72 input cursor-pointer "  style="border-width: 3px ; border-color:rgb(110, 142, 241);" type="number" maxlength="11" placeholder="    Enter 11 digit your number" required/>
+                                              <label class="fieldset-label font-semibold text-black " >Amount</label>
+                                              <input id="amount-trans" class=" box w-72 input  "  style="border-width: 3px ; border-color:rgb(110, 142, 241);" type="number" placeholder="    Enter Amount to Transfer" required/>
+                                              <label class="fieldset-label font-semibold text-black " >PIN Number</label>
+                                              <input id="pin-trans"  class=" box w-72 input cursor-pointer "  style="border-width: 3px ; border-color:rgb(110, 142, 241);" type="password" maxlength="6" placeholder="    Enter your 6 digit PIN" required/>
+                                          
+                                          
+                                              <button id="btn-trans"   class="btn btn-neutral w-72 mt-4 bg-blue-500 hover:bg-blue-600" type="submit" >Send Now</button>
+                                            </fieldset>
+                                          </form>
+                                          
+                              </div>
+                            </div>
+                          </div>
+                                </section>
+
+                                <section id="get-bonus">
+                                    <h1 class="text-xl font-bold">Get Bonus</h1>
+                                    <div class="hero bg-gray-200 min-h-screen ">
+                                                    
+                                        <div class="hero-content flex-col  lg:flex-row-reverse">
+                                          
+                                          <div class="card mb-72 mt-0  bg-base-100 w-full   max-w-sm shrink-0 shadow-2xl">
+                                                <form class="card-body">
+                                                        <fieldset class="fieldset">
+                                                         
+                                                          
+                                                          <label class="fieldset-label font-semibold text-black " >Enter bonus Cupon</label>
+                                                          <input id="bonus-cupon"  class=" box w-72 input cursor-pointer "  style="border-width: 3px ; border-color:rgb(110, 142, 241);" type="text"  placeholder="    Enter cupon code" required/>
+                                                      
+                                                      
+                                                          <button id="btn-bonus"   class="btn btn-neutral w-72 mt-4 bg-blue-500 hover:bg-blue-600" type="submit" >Send Now</button>
+                                                        </fieldset>
+                                                      </form>
+                                                      
+                                          </div>
+                                        </div>
+                                      </div>
+                                            </section>
+
+                                            <section id="Pay-Bill">
+                                                <h1 class="text-xl font-bold">Pay Bill</h1>
+                                                <div class="hero bg-gray-200 min-h-screen ">
+                                                                
+                                                    <div class="hero-content flex-col  lg:flex-row-reverse">
+                                                      
+                                                      <div class="card mb-72 mt-0  bg-base-100 w-full   max-w-sm shrink-0 shadow-2xl">
+                                                            <form class="card-body">
+                                                                    <fieldset class="fieldset">
+                                                                      <label class="fieldset-label font-semibold text-black"  >Select a Bank</label>
+                                                                      <select required  class="select box w-72 input" style="border-width: 3px ; border-color:rgb(110, 142, 241)">
+                                                                        <option disabled selected >Select </option>
+                                                                        <option>   Gas-Bill    </option>
+                                                                        <option>   Current-Bill    </option>
+                                                                        <option>   water     </option>
+                                                                        <option>   Internet </option>
+                                                                        <option>   Teliphone     </option>
+                                                                        <option>   TV       </option>
+                                                                        <option>   Credit-card      </option>
+                                                                        <option>   Gov. Fee        </option>
+                                                                        <option>   Insurance      </option>
+                                                                        <option>   Tracker  </option>
+                                                                      </select>
+                                                                      
+                                                                      <!-- <input id="Account-number" class=" box w-72 input  " style="border-width: 3px ; border-color:rgb(110, 142, 241);" type="number" placeholder="   Enter your number" required />   -->
+                                                                      <label class="fieldset-label font-semibold text-black " >Biller Account Number</label>
+                                                                      <input id="pay-bill-ac-num"  class=" box w-72 input cursor-pointer "  style="border-width: 3px ; border-color:rgb(110, 142, 241);" type="number" maxlength="11" placeholder="    Enter 11 digit your AC number" required/>
+                                                                      <label class="fieldset-label font-semibold text-black " >Amount to Pay</label>
+                                                                      <input id="pay-bill-amount" class=" box w-72 input  "                    style="border-width: 3px ; border-color:rgb(110, 142, 241);"                           type="number"  placeholder="    Add Amount to Pay" required/>
+                                                                      <label class="fieldset-label font-semibold text-black " >PIN Number</label>
+                                                                      <input id="pay-bill-pin" class=" box w-72 input cursor-pointer "         style="border-width: 3px ; border-color:rgb(110, 142, 241);"           type="password" maxlength="6"  placeholder="    Enter your PIN" required/>
+                                                                  
+                                                                  
+                                                                      <button id="btn-pay-bill"  class="btn btn-neutral w-72 mt-4 bg-blue-500 hover:bg-blue-600" type="submit">Pay Now</button>
+                                                                    </fieldset>
+                                                                  </form>
+                                                                  
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                        
+                                                 </section>
+
+                                                 <section id="transaction-history">
+                                                    <h1 id="" class="text-2xl font-bold text-center text-red-400 p-3">Transaction History</h1>
+                                                    <div id="transaction-container">
+
+                                                    </div>
+                                                 </section>
+
+        </section>
+        </header>
+           
+       
+    </section>
+
+      
+    <script src="/script/addMoney.js"></script>
+    <script src="script/toggle.js"></script>
+    <script src="script/cashOut.js"></script>
+    <script src="script/transferMoney.js"></script>
+    <script src="script/getBonus.js"></script>
+    <script src="script/payBill.js"></script>
+    <script src="script/transactionHistory.js"></script>
+    <script src="script/utilities.js"></script>
+</body>
+</html>

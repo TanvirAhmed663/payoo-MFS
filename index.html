@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MFS</title>
+   <!-- DaisyUI + Tailwind CDN -->
+    <!-- Tailwind + DaisyUI -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {},
+    },
+    plugins: [daisyui],
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/daisyui"></script>
+
+   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="bg-slate-800">
+        <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+               
+                <header>
+                        <nav class="flex justify-center items-center mt-6">
+                                <div class=" relative flex justify-center items-center w-9/12 ">
+                                        <img class="w-72 absolute mt-64" src="assets/bg.png" alt="">
+                                        <img class="w-16 mt-32 " src="assets/Group.png" alt="">
+                                </div>
+                        </nav>
+                </header>
+               
+                <div class="hero bg-gray-200 min-h-screen ">
+                        
+                        <div class="hero-content flex-col  lg:flex-row-reverse">
+                          
+                          <div class="card mb-72 mt-0  bg-base-100 w-full   max-w-sm shrink-0 shadow-2xl">
+                                <form class="card-body">
+                                        <fieldset class="fieldset">
+                                          <label class="fieldset-label font-semibold text-black" >Account Number</label>
+                                          
+                                          <input id="Account-number" class=" box w-72 input  " style="border-width: 3px ; border-color:rgb(110, 142, 241);" type="number" placeholder="   Enter your number" required />  
+                                          <label class="fieldset-label font-semibold text-black " >PIN</label>
+                                          <input id="pin" class=" box w-72 input cursor-pointer "  style="border-width: 3px ; border-color:rgb(110, 142, 241);" type="password" placeholder="    Enter your PIN" required/>
+                                       <div>
+                                            <a class="link hover:text-blue-600">Forgot password?</a>
+                                          </div>
+                                      
+                                          <button id="login-btn" class="btn btn-neutral w-72 mt-4 bg-blue-500 hover:bg-blue-600" type="submit">Login</button>
+                                        </fieldset>
+                                      </form>
+                                      
+                          </div>
+                        </div>
+                      </div>
+        </section>
+
+        <script src="script/login.js"></script>
+        
+
+        
+</body>
+</html>  
