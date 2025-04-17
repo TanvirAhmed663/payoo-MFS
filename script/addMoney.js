@@ -1,5 +1,5 @@
 // console.log(9)
-
+document.addEventListener('DOMContentLoaded', function() {
 document.getElementById("btn-add-money")
 .addEventListener('click',function(event){
     event.preventDefault();
@@ -51,4 +51,5 @@ document.getElementById("btn-add-money")
  
     }
     
+})
 })
