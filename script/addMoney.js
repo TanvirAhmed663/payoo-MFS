@@ -9,7 +9,21 @@ document.getElementById("btn-add-money")
     const Pin=document.getElementById("add-money-pin").value;
     const mainBalance= document.getElementById("main-balance").innerText;
     const convertedMainBalance=parseFloat(mainBalance);
-    
+
+    // const AccountNumber= getInputValueByID("add-money-ac-num");
+    // const Amount =getInputValueByID("add-money-amount");
+   
+    // const Pin=getInputValueByID("add-money-pin");
+    // const mainBalance= getElementById("main-balance");
+   
+
+    // getInputValueByID("add-money-ac-num");
+    // getInputValueByID("add-money-amount");
+    // getInputValueByID("add-money-pin");
+
+    // getInnerTextByID("main-balance");
+
+   
     if(AccountNumber.length ===11 && Pin.length ===6){
         const sum = convertedMainBalance + convertedAmount;
         document.getElementById("main-balance").innerText= sum.toFixed(2);
