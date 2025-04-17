@@ -10,17 +10,7 @@ document.getElementById("btn-cash-Out")
     const mainBalance=document.getElementById("main-balance").innerText;
     const ConvertMainBalance= parseFloat(mainBalance);
 
-    // const Pin= getInputValueByID("pin-cash-out");
-    // const AgentNumber= getInputValueByID("agent-num-cash-out");
-    // const withdrawAmount=getInputValueByID("amount-cash-out");
   
-    // const mainBalance=getInputValueByID("main-balance");
-
-    // getInputValueByID("pin-cash-out");
-    // getInputValueByID("agent-num-cash-out");
-    // getInputValueByID("amount-cash-out");
-
-    // getInnerTextByID("main-balance");
 
     if(AgentNumber.length ===11 && Pin.length ===6){
         const sub = ConvertMainBalance - ConvertWithdrawAmount;

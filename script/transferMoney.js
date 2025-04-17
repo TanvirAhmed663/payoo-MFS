@@ -10,18 +10,7 @@ document.getElementById("btn-trans")
     const mainBalance=document.getElementById("main-balance").innerText;
     const ConvertMainBalance= parseFloat(mainBalance);
 
-    // const Pin=  getInputValueByID("pin-trans");
-    // const withdrawAmount=  getInputValueByID("amount-trans");
-    // const mainBalance= getInnerTextByID("main-balance");
-    // const AgentNumber= getInputValueByID("account-num-trans");
-    
-
-    // getInputValueByID("pin-trans");
-    // getInputValueByID("account-num-trans");
-    // getInputValueByID("amount-trans");
-
-    // getInnerTextByID("main-balance");
-
+   
     if(AgentNumber.length ===11 && Pin.length ===6){
         const sub = ConvertMainBalance - ConvertWithdrawAmount;
         document.getElementById("main-balance").innerText= sub.toFixed(2);
