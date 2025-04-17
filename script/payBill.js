@@ -11,19 +11,6 @@ document.getElementById("btn-pay-bill")
     const mainBalance=document.getElementById("main-balance").innerText;
     const ConvertMainBalance= parseFloat(mainBalance);
 
-    // const Pin= getInputValueByID("pay-bill-pin");
-    // const AgentNumber=getInputValueByID("pay-bill-ac-num");
-    // const withdrawAmount= getInputValueByID("pay-bill-amount");
-    // const mainBalance=getInnerTextByID("main-balance");
-    
-
-    // getInputValueByID("pay-bill-pin");
-    // getInputValueByID("pay-bill-ac-num");
-    // getInputValueByID("pay-bill-amount");
-
-    // getInnerTextByID("main-balance");
-
-
     if(AgentNumber.length ===11 && Pin.length ===6){
         const sub = ConvertMainBalance - ConvertWithdrawAmount;
         document.getElementById("main-balance").innerText= sub.toFixed(2);
